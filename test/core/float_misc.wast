@@ -676,3 +676,12 @@
 (assert_return (invoke "f32.nearest" (f32.const 0x1.fffffep+22)) (f32.const 0x1p+23))
 (assert_return (invoke "f64.nearest" (f64.const -0x1.fffffffffffffp+51)) (f64.const -0x1p+52))
 (assert_return (invoke "f64.nearest" (f64.const 0x1.fffffffffffffp+51)) (f64.const 0x1p+52))
+
+
+
+
+
+;; Rounding Variants
+(assert_return (invoke "f64.add_floor" (f64.const 1.7976931348623157e308) (f64.const 1.7976931348623157e308)) (f64.const 1.7976931348623157e308))
+
+;; ...
